@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>APSRTC Bus Pass Application</title>
+</head>
+<body>
+
+    <center>
+        <table width="600" bgcolor="#E6E6FF" cellpadding="25" style="border-radius: 50px;">
+            <tr>
+                <td align="center">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/c/c4/Andhra_Pradesh_State_Road_Transport_Corporation_logo.png" alt="TSRTC Logo" width="100px"><br>
+                    <h2 style="color: blue; font-family: sans-serif;">ANDHRA PRADESH STATE ROAD TRANSPORT CORPORATION</h2>
+                    <h2 style="font-family: serif;">GENERAL BUS PASS APPLICATION</h2>
+                </td>
+            </tr>
+        </table>
+    </center>
+
+    <br>
+
+    <center>
+        <form action="./buspasssubmit.html" method="get">
+            <fieldset style="width: 800px; border-radius: 10px;">
+                <legend style="font-family: serif; font-size: 20px; color: blue; background-color: #E6E6FF;">Applicant Details</legend>
+            <table width="900" border="0" cellpadding="10" cellspacing="0">
+            
+                
+                <tr>
+                    <td><label for="name">Name <font color="red">*</font></label></td>
+                    <td>
+                        <input type="text" id="name" maxlength="20" name="Name" required><br>
+                        <small><font color="red">(Maximum characters: 20)</font></small>
+                    </td>
+                    <td><label for="father_name">Father's / Guardian's Name <font color="red">*</font></label></td>
+                    <td><input type="text" id="father_name" name="Father_name" required></td>
+                </tr>
+
+                <tr>
+                    <td>Date of birth <font color="red">*</font><br>
+                        <small><font color="blue">(dd/mm/yyyy)</font></small>
+                    </td>
+                    <td><input type="date" required></td>
+                    <td>Gender <font color="red">*</font></td>
+                    <td>
+                        <input type="radio" name="gender" required> Female
+                        <input type="radio" name="gender" required> Male
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Age As on :</td>
+                    <td>
+                        <input type="text" size="2"> Year(s) 
+                        <input type="text" size="2"> Month(s) 
+                        <input type="text" size="2"> Day(s)
+                    </td>
+                    <td>Aadhaar No:</td>
+                    <td><input type="text"></td>
+                </tr>
+
+                <tr>
+                    <td>WhatsApp No <font color="red">*</font></td>
+                    <td><input type="text" required></td>
+                    <td>E-mail Id <font color="red">*</font></td>
+                    <td><input type="email" required></td>
+                </tr>
+
+                <tr>
+                    <td>Photo <font color="red">*</font></td>
+                    <td colspan="3">
+                        <input type="file" required>
+                    </td>
+                </tr>
+            </table>
+            </fieldset>
+            <br>
+            <fieldset style="width: 800px; border-radius: 10px;">
+                <legend style="font-family: serif; font-size: 20px; color: blue; background-color: #E6E6FF;">Residential Address Details</legend>
+            <table width="900" border="0" cellpadding="10" cellspacing="0">
+            
+                
+                <tr>
+                    <td><label for="applicantaddress">Applicant Address <font color="red">*</font></label></td>
+                    <td>
+                        <textarea></textarea><br>
+                        <small><font color="red">(Maximum characters: 20)</font></small>
+                    </td>
+                    <td><label for="District" >District <font color="red">*</font></label></td>
+                    <td><select name = "District"> <option value=" "><option value="East Godavari">East Godavari</option></option><option value="West Godavari">West Godavari</option><option value="Krishna">Krishna</option><option value="Prakasam">Prakasam</option><option value="Srikakulam">Srikakulam</option><option value="Kurnool">Kurnool</option></select></td>
+                </tr>
+
+                <tr>
+                    <td><label for="Mandal" >Mandal <font color="red">*</font></label></td>
+                    <td><select name = "Mandal" > <option value=" "></option><option value="Palakoderu">Palakoderu</option><option value="Bhimavaram">Bhimavaram</option><option value="Undi">Undi</option><option value="ganapavaram">Ganapavaram</option><option value="Narsapuram">Narsapuram</option><option value="Eluru">Eluru</option></select></td>
+                    <td><label for="Village">Village</label> <font color="red">*</font></td>
+                    <td>
+                        <select name="Village"><option value=" "></option><option value="Goraganamudi"> Goraganamudi</option ><option value="Vissakoderu">Vissakoderu</option><option value="Pennada">Pennada</option><option value="Srungavruksham">Srungavruksham</option><option value="guntur">Guntur</option><option value="Vijayawada">Vijayawada</option></select>
+                    </td>
+                </tr>
+
+                <tr><td><label for ="pincode">Pincode</label><font color="red">*</font></td>
+                <td><input type="number" id ="pincode" name="pincode" maxlength="7" minlength="7" required></label></td>    
+                </tr>
+            </table>
+            </fieldset>
+            <br>
+            <fieldset style="width: 800px; border-radius: 10px;">
+                <legend style="font-family: serif; font-size: 20px; color: blue; background-color: #E6E6FF;">Pass Type Details</legend>
+            <table width="900" border="0" cellpadding="10" cellspacing="0">
+                <tr><td><label for = "city">City<font color="red">*</font></label></td>
+                <td><select name = "city" required> <option value=" "></option><option value="Palakoderu">Palakoderu</option><option value="Bhimavaram">Bhimavaram</option><option value="Gudiwada">Gudiwada</option><option value="Ongole">Ongole</option><option value="Vijayawada">Vijayawada</option><option value="Undi">Undi</option></select></td></tr><br>
+                 <tr><td><label for = "city">Place Type<font color="red">*</font></label></td>
+                <td><select name = "city"> <option value=" "></option><option value="Palakoderu">Palakoderu</option><option value="Bhimavaram">Bhimavaram</option><option value="Gudiwada">Gudiwada</option><option value="Ongole">Ongole</option><option value="Vijayawada">Vijayawada</option><option value="Undi">Undi</option></select></td></tr>
+                <tr>
+                    <td><label for="Mandal" required>From Place District<font color="red">*</font></label></td>
+                    <td><select name = "Mandal"> <option value=" "></option><option value="Palakoderu">Palakoderu</option><option value="Bhimavaram">Bhimavaram</option><option value="Undi">Undi</option><option value="ganapavaram">Ganapavaram</option><option value="Narsapuram">Narsapuram</option><option value="Eluru">Eluru</option></select></td>
+                    <td><label for="Village" required>To Place District</label> <font color="red">*</font></td>
+                    <td>
+                        <select name="Village"><option value=" "></option><option value="Goraganamudi"> Goraganamudi</option ><option value="Vissakoderu">Vissakoderu</option><option value="Pennada">Pennada</option><option value="Srungavruksham">Srungavruksham</option><option value="guntur">Guntur</option><option value="Vijayawada">Vijayawada</option></select>
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td><label for="Mandal" required>From Place<font color="red">*</font></label></td>
+                    <td><select name = "Mandal"> <option value=" "></option><option value="Palakoderu">Palakoderu</option><option value="Bhimavaram">Bhimavaram</option><option value="Undi">Undi</option><option value="ganapavaram">Ganapavaram</option><option value="Narsapuram">Narsapuram</option><option value="Eluru">Eluru</option></select></td>
+                    <td><label for="Village" required>To Place</label> <font color="red">*</font></td>
+                    <td>
+                        <select name="Village"><option value=" "></option><option value="Goraganamudi"> Goraganamudi</option ><option value="Vissakoderu">Vissakoderu</option><option value="Vissakoderu">Vissakoderu</option><option value="Pennada">Pennada</option><option value="Srungavruksham">Srungavruksham</option><option value="guntur">Guntur</option><option value="Vijayawada">Vijayawada</option></select>
+                    </td>
+                </tr>
+            <tr><td><label for = "city" required>Route<font color="red">*</font><font color="red"><small>(From__Via__To)</small></font></label></td>
+                <td><select name = "city"> <option value=" "></option><option value="Palakoderu">Palakoderu</option><option value="Bhimavaram">Bhimavaram</option><option value="Gudiwada">Gudiwada</option><option value="Ongole">Ongole</option><option value="Vijayawada">Vijayawada</option><option value="Undi">Undi</option></select></td></tr><br>
+    
+            </table></fieldset>
+                <br>
+                <fieldset style="width: 800px; border-radius: 10px;">
+                <legend style="font-family: serif; font-size: 20px; color: blue; background-color: #E6E6FF;">Mode of Payment and Pass Collection</legend>
+            <table width="900" border="0" cellpadding="10" cellspacing="0">
+                <tr><td><label for = "payment" required>payment Mode<font color="red">*</font></label></td>
+                <td><select name = "payment"> <option value=" "></option><option value="upi">UPI</option><option value="Cash">Cash</option></option><option value="online payment">Online Payment</option></option><option value="Debit card">Debit Card</option></option><option value="Credit Card">Credit Card</option></option><option value="netbanking">Netbanking</option></select></td></tr><br>
+                 <tr><td><label for = "pass" required>Pass Delivery Mode<font color="red">*</font></label></td>
+                <td><select name = "pass"> <option value=" "></option><option value="Home Delivery">Home Delivery</option><option value="Postal Delivery">Postal Delivery</option><option value="Courier Service">Courier Service</option><option value="Collect at Center">Collect at Center</option><option value="Digital / E-Pass">Digital / E-Pass</option></select></td></tr>
+                <tr>
+                    <td><label for="Mandal" required>Center at which you want to collect pass<font color="red">*</font></label></td>
+                    <td><select name = "Mandal"><option value=" "></option> <option value="APSRTC Bus Station – Kurnool">APSRTC Bus Station – Kurnool</option><option value="APSRTC Depot – Guntur">APSRTC Depot – Guntur</option><option value="APSRTC Depot – Tirupati">APSRTC Depot – Tirupati</option><option value="APSRTC Depot – Visakhapatnam">APSRTC Depot – Visakhapatnam</option><option value="APSRTC Depot – Vijayawada">APSRTC Depot – Vijayawada</option></select></td>
+                    
+                </tr></table></fieldset><br>
+                <input type = "submit"></input>
+        </form>
+        <br>
+    
+        
+    </center>
+
+    
+
+
+</body>
+</html>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    ble></center> 
+</body>
+</html>
